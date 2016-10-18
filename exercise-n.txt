@@ -514,3 +514,237 @@ mysql> SELECT DISTINCT LOWER(country) from Address ORDER BY 1;
 249 rows in set (0.00 sec)
 
 Ex. 4 - first names
+mysql> SELECT e.firstName FROM Entry e JOIN AddressBook ab ON (e.addressBookId = ab.id) WHERE ab.name="Pharetra Ut Limited";                                     
++-------------+
+| firstName   |
++-------------+
+| Zelenia     |
+| Abdul       |
+| Idola       |
+| Illana      |
+| Winifred    |
+| Buckminster |
+| Heidi       |
+| Nell        |
+| Ciara       |
+| Sylvia      |
+| Caryn       |
+| Dieter      |
+| Jamalia     |
+| Herrod      |
+| Unity       |
+| Pascale     |
+| Colton      |
+| Jamal       |
+| Abel        |
+| Zena        |
+| Prescott    |
+| Idona       |
+| Paloma      |
+| Neve        |
+| Kyla        |
+| Kimberley   |
+| Jillian     |
+| Addison     |
+| Jacqueline  |
+| Sasha       |
+| Lee         |
+| Salvador    |
+| Yoko        |
+| Stacy       |
+| Halee       |
+| Blythe      |
+| Tad         |
+| Haley       |
+| Lara        |
+| Summer      |
+| Latifah     |
+| Faith       |
+| Stacey      |
+| Jennifer    |
+| Fulton      |
+| Colin       |
+| Thane       |
+| Caryn       |
+| Bo          |
+| Jamal       |
+| Amena       |
+| Melanie     |
+| Driscoll    |
+| Gareth      |
+| Colt        |
+| Martha      |
+| Sierra      |
+| Nita        |
+| Celeste     |
+| Kathleen    |
+| Samuel      |
+| Aaron       |
+| Cheyenne    |
+| Brett       |
+| Rebekah     |
+| Zelenia     |
+| Abdul       |
+| Idola       |
+| Illana      |
+| Winifred    |
+| Buckminster |
+| Heidi       |
+| Nell        |
+| Ciara       |
+| Sylvia      |
+| Caryn       |
+| Dieter      |
+| Jamalia     |
+| Herrod      |
+| Unity       |
+| Pascale     |
+| Colton      |
+| Jamal       |
+| Abel        |
+| Zena        |
+| Prescott    |
+| Idona       |
+| Paloma      |
+| Neve        |
+| Kyla        |
+| Kimberley   |
+| Jillian     |
+| Addison     |
+| Jacqueline  |
+| Sasha       |
+| Lee         |
+| Salvador    |
+| Yoko        |
+| Stacy       |
+| Halee       |
+| Blythe      |
+| Tad         |
+| Haley       |
+| Lara        |
+| Summer      |
+| Latifah     |
+| Faith       |
+| Stacey      |
+| Jennifer    |
+| Fulton      |
+| Colin       |
+| Thane       |
+| Caryn       |
+| Bo          |
+| Jamal       |
+| Amena       |
+| Melanie     |
+| Driscoll    |
+| Gareth      |
+| Colt        |
+| Martha      |
+| Sierra      |
+| Nita        |
+| Celeste     |
+| Kathleen    |
+| Samuel      |
+| Aaron       |
+| Cheyenne    |
+| Brett       |
+| Rebekah     |
+| Zelenia     |
+| Abdul       |
+| Idola       |
+| Illana      |
+| Winifred    |
+| Buckminster |
+| Heidi       |
+| Nell        |
+| Ciara       |
+| Sylvia      |
+| Caryn       |
+| Dieter      |
+| Jamalia     |
+| Herrod      |
+| Unity       |
+| Pascale     |
+| Colton      |
+| Jamal       |
+| Abel        |
+| Zena        |
+| Prescott    |
+| Idona       |
+| Paloma      |
+| Neve        |
+| Kyla        |
+| Kimberley   |
+| Jillian     |
+| Addison     |
+| Jacqueline  |
+| Sasha       |
+| Lee         |
+| Salvador    |
+| Yoko        |
+| Stacy       |
+| Halee       |
+| Blythe      |
+| Tad         |
+| Haley       |
+| Lara        |
+| Summer      |
+| Latifah     |
+| Faith       |
+| Stacey      |
+| Jennifer    |
+| Fulton      |
+| Colin       |
+| Thane       |
+| Caryn       |
+| Bo          |
+| Jamal       |
+| Amena       |
+| Melanie     |
+| Driscoll    |
+| Gareth      |
+| Colt        |
+| Martha      |
+| Sierra      |
+| Nita        |
+| Celeste     |
+| Kathleen    |
+| Samuel      |
+| Aaron       |
+| Cheyenne    |
+| Brett       |
+| Rebekah     |
++-------------+
+195 rows in set (0.01 sec)
+
+Ex. 5
+mysql> SELECT
+    ->     a.email
+    -> FROM
+    ->     Account a JOIN AddressBook ab ON (a.id = ab.accountId)
+    -> WHERE
+    ->     ab.id = 100;
++----------------------------------+
+| email                            |
++----------------------------------+
+| dapibus.quam@interdumligulaeu.ca |
++----------------------------------+
+
+Ex. 6
+mysql> SELECT
+    ->     p.content
+    -> FROM
+    ->     Entry e JOIN Phone p ON (e.id = p.entryId)
+    -> WHERE
+    ->     e.firstName IN ('Jenkins', 'Charlotte');
++----------------+
+| content        |
++----------------+
+| (786) 458-8601 |
+| (110) 167-3420 |
+| (545) 726-3700 |
+| (638) 863-0684 |
+| (257) 554-2464 |
+| (605) 175-1334 |
+| (907) 146-0259 |
++----------------+
+7 rows in set (0.01 sec)
