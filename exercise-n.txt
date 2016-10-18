@@ -748,3 +748,29 @@ mysql> SELECT
 | (907) 146-0259 |
 +----------------+
 7 rows in set (0.01 sec)
+
+Ex. 7
+SELECT
+    substring_index(content,'@',-1) 
+FROM
+    ElectronicMail;
+    
+Ex. 8
+SELECT
+     p.subtype , count(p.subtype)
+FROM
+    Entry e JOIN Phone p ON (e.id = p.entryId)
+WHERE
+    e.birthday BETWEEN '1950-10-01 00-00-00' AND '1960-10-01 00-00-00'
+GROUP BY
+    1
+;
++----------+------------------+
+| subtype  | count(p.subtype) |
++----------+------------------+
+| landline |              170 |
+| cellular |              138 |
+| fax      |              134 |
++----------+------------------+
+3 rows in set (0.00 sec)
+
