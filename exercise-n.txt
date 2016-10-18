@@ -774,3 +774,24 @@ GROUP BY
 +----------+------------------+
 3 rows in set (0.00 sec)
 
+Ex. 9
+SELECT
+     country, city
+FROM
+    Address
+WHERE country IN ('Canada', 'Austria', 'Isle of Man', 'Ireland', 'Japan')
+ORDER BY 1;
+
+Ex. 10
+UPDATE ElectronicMail
+SET Type= null
+WHERE Type='work';
+
+UPDATE ElectronicMail
+SET Type= 'work'
+WHERE Type='home';
+
+UPDATE ElectronicMail
+SET Type= 'home'
+WHERE Type= null;
+
